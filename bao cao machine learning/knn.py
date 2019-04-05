@@ -11,11 +11,12 @@ A = np.genfromtxt('data.txt', delimiter=',')
 
 trainX = A[:60,0:5]
 trainY = A[:60,5]
-trainX = scaling(trainX)
+trainX = scaling2(trainX)
+
 #print(trainX)
 #print(trainY)
 testX = A[60:80,0:5]
-testX = scaling(testX)
+testX = scaling2(testX)
 testY = A[60:80,5]
 k = 5
 p = 2 
