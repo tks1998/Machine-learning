@@ -1,11 +1,11 @@
 import numpy as np
-def scaling(data ):
+def scaling(data , t):
     for i in range(0,len(data)):
-        data[i] = data[i]/(np.sum(data[i]*data[i])+1)
+        data[i] = data[i]/t[i] ; 
     return data
-def scaling2(data):
-    t = np.mean(data,axis = 0 ) 
-    st = np.std(data,axis = 0)
-    for i in range(0,1):
+def scaling2(data,t,st):
+    for i in range(data.shape[1]-1):
         data[:,i] = (data[:,i] - t[i] ) / st[i] ;  
+    
     return data
+
